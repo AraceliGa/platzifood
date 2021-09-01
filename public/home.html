@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"></head>
+    <script defer src="https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js"></script>
+
+<body>
+    <nav x-data="{ open: false }" class="fixed z-10 w-full bg-secondary text-gray-100 ">
+        <div class="px-2 bg-secondary text-white flex justify-between items-center">
+            <div>
+                <img class="h-8 py-1 " src="img/platzifoood.svg" alt="">
+            </div>
+            <div class="text-2xl cursor-pointer" @click="open = ! open">&equiv;</div>
+        </div>
+        <div x-show="open">
+        <div class="mx-2">
+            <input class=" w-full leading-snug text-grey-800 placeholder-secundary py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline" type="text" name="" id="" placeholder="que queres comer hoy ?" type="search">
+        </div>
+        <div class="py-1 mx-2 md:flex items-center justify-around">
+            <div class="flex">
+                precio:
+                <div class="ml-2">$</div>
+                <div class="ml-2 text-primary">$$</div>
+                <div class="ml-2">$$$</div>
+                <div class="ml-2">$$$$</div>
+            </div>
+            <div class="flex">
+                <div class="">calificacion:</div>
+                <div class="ml-2 hover:text-primary">&starf;</div>
+                <div class="ml-px hover:text-primary">&starf;</div>
+                <div class="ml-px hover:text-primary">&starf;</div>
+                <div class="ml-px hover:text-primary">&starf;</div>
+                <div class="ml-px hover:text-primary">&star;</div>
+            </div>
+            <div>
+                <button class="rounded shadow-xl px-4 py-2 bg-primary block hover:shadow-none hover:bg-gray-700 hover:text-white">Filtrar</button>
+
+            </div>
+        </div>
+    </div>
+    </nav>
+    
+    <main class="mb-8">
+        <div class="h-56 bg-no-repeat bg-bottom bg-cover md:h-80 md:bg-center " style="background-image: url(https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);">
+        </div>
+        <div class="container mx-auto md:flex">
+            <div class="mx-2 md:mx-0 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+                <div>
+                    <img class="w-full h-full md:w-48 objet-cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500q=80" alt="imagen de hamurguesa picante">
+                </div>
+                <div class="relative mx-2 p-2 shadow-lg bg-white md:shadow-none md:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl tracking-tight font-semibold text-grey-900 uppercase">Hamurguesa con queso</h2>
+                    <p class="text-grey-700 leading-snug md:text-lg">Hamurguesa con queso y aderezo chipotle.</p>
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$150</div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; /36 reseñas</div>
+                </div>
+            </div>
+            <div class="mx-2 md:mx-0 md:ml-2 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+                <div>
+                    <img class="w-full h-full md:w-48 objet-cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500q=80" alt="imagen de hamurguesa">
+                </div>
+                <div class="relative mx-2 p-2 shadow-lg bg-white md:shadow-none md:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl tracking-tight font-semibold text-grey-900 uppercase">Hamurguesa completa</h2>
+                    <p class="text-grey-700 leading-snug md:text-lg">Hamurguesa con queso y aderezo chipotle.</p>
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$150</div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&starf;&star; /29 reseñas</div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto md:flex">
+            <div class="mx-2 md:mx-0 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+                <div>
+                    <img class="w-full h-full md:w-48 objet-cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500q=80" alt="imagen de hamurguesa">
+                </div>
+                <div class="relative mx-2 p-2 shadow-lg bg-white md:shadow-none md:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl tracking-tight font-semibold text-grey-900 uppercase">Hamurguesa con queso</h2>
+                    <p class="text-grey-700 leading-snug md:text-lg">Hamurguesa con queso y aderezo chipotle.</p>
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$150</div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&star;&star; /18 reseñas</div>
+                </div>
+            </div>
+            <div class="mx-2 md:mx-0 md:ml-2 mt-4 md:w-1/2 md:flex md:bg-white rounded-lg">
+                <div>
+                    <img class="w-full h-full md:w-48 objet-cover rounded-lg md:rounded-r-none" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500q=80" alt="imagen de hamurguesa">
+                </div>
+                <div class="relative mx-2 p-2 shadow-lg bg-white md:shadow-none md:bg-transparent rounded-lg -mt-2">
+                    <h2 class="text-xl tracking-tight font-semibold text-grey-900 uppercase">Hamurguesa completa</h2>
+                    <p class="text-grey-700 leading-snug md:text-lg">Hamurguesa con queso y aderezo chipotle.</p>
+                    <div class="mt-2 text-sm font-semibold text-gray-700">$150</div>
+                    <div class="mt-2 text-xs text-yellow-700">&starf;&starf;&starf;&star;&star; /42 reseñas</div>
+                </div>
+            </div>
+        </div>
+    <div class=" container mx-auto mx-2 mt-4">
+        <div>
+            <div>Nombre</div>
+            <input class=" w-full leading-snug text-grey-800 placeholder-secundary py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline" type="text" name="" id="" placeholder="nombre">
+        </div>
+        <div>
+            <div>mail</div>
+            <input class="w-full leading-snug text-grey-800 placeholder-secundary py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline" type="email" name="" id="" placeholder="ejemplo@mail.com">
+        </div>
+        <div>
+            <div>comentarios</div>
+            <textarea class="w-full leading-snug text-grey-800 placeholder-secundary py-1 px-4 rounded border border-blue-300 bg-gray-200 hover:bg-white focus:outline-none focus:shadow-outline" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button class="rounded shadow-xl text-gray-200 px-4 py-2 bg-gray-600 mx-auto block hover:shadow-none hover:bg-gray-700 hover:text-white">enviar</button>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class=" w-full text-white bg-secondary">
+         <div >
+            <div class="mt-4 ml-8 md:flex justify-center">
+                <div class="md:mx-2 hover:text-primary cursor-pointer"><i class="fa fa-facebook"></i> /facebook</div>
+                <div class="md:mx-2 hover:text-primary cursor-pointer"><i class="fa fa-twitter"></i> @twitter</div>
+                <div class="md:mx-2 hover:text-primary cursor-pointer"><i class="fa fa-instagram"></i> @instagram</div>
+            </div>
+            <ul class="mt-4 mb-4 ml-8 md:flex justify-center  ">
+                <li class="md:mx-2 hover:text-primary cursor-pointer">Soporte</li>
+                <li class="md:mx-2 hover:text-primary cursor-pointer">Acerca de nosotros</li>
+                <li class="md:mx-2 hover:text-primary cursor-pointer">Registro</li>
+                <li class="md:mx-2 hover:text-primary cursor-pointer">Aviso de privacidad</li>
+            </ul>
+        </div>
+        <div></div>
+    </footer>
+</body>
+</html>
